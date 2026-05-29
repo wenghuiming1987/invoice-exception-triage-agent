@@ -22,6 +22,7 @@ Expected:
 - [x] Local demo video generated: `submission/demo/invoice-exception-triage-agent-demo.mp4`
 - [x] Duration verified under 5 minutes: about 2 minutes 17 seconds.
 - [x] Narration source saved: `submission/demo/demo-narration.json`
+- [x] YouTube upload metadata prepared: `submission/demo/youtube-upload-metadata.md`
 - [ ] Upload video to YouTube, Vimeo, or Youku and use that link in Devpost.
 
 ## GitHub
@@ -46,8 +47,8 @@ Expected:
 
 ## Devpost
 
-- [ ] Create project page.
-- [ ] Add title and tagline.
+- [x] Create draft project page.
+- [x] Add title and tagline.
 - [ ] Paste project copy from `submission/devpost-project-copy.md`.
 - [ ] Add public GitHub repository.
 - [ ] Add published demo video link after uploading `submission/demo/invoice-exception-triage-agent-demo.mp4`.

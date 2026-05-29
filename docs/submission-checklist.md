@@ -4,7 +4,8 @@ Use this as the final pre-submission gate. Items marked complete are satisfied b
 
 ## Required Submission Assets
 
-- [ ] Devpost project page created.
+- [x] Devpost draft project page created.
+- [ ] Devpost final submission completed.
 - [x] Public GitHub repository created: https://github.com/wenghuiming1987/invoice-exception-triage-agent
 - [ ] Public GitHub repository linked from Devpost.
 - [x] MIT license included in `LICENSE`.
