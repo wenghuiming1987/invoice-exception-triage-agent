@@ -19,12 +19,12 @@ Expected:
 
 ## GitHub
 
-- [ ] Initialize git repository.
-- [ ] Commit all submission files.
-- [ ] Create public GitHub repository.
+- [x] Initialize git repository.
+- [x] Commit all submission files.
+- [x] Create public GitHub repository.
 - [x] Create public GitHub repository: https://github.com/wenghuiming1987/invoice-exception-triage-agent
 - [x] Push default branch.
-- [ ] Confirm README renders correctly.
+- [x] Confirm public GitHub repository is visible.
 - [ ] Add GitHub URL to Devpost.
 
 ## UiPath
