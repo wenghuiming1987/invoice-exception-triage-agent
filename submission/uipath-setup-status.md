@@ -27,13 +27,13 @@ Local endpoint:
 http://127.0.0.1:8000/triage/invoice
 ```
 
-Public HTTPS endpoint:
+Latest observed public HTTPS endpoint for this local run:
 
 ```text
-https://bf5b9a90a3340d.lhr.life/triage/invoice
+https://e0d6e3dd86403e.lhr.life/triage/invoice
 ```
 
-Note: this is a temporary localhost.run tunnel and only remains valid while the local `uvicorn` and SSH tunnel sessions are running.
+Note: this is a temporary localhost.run tunnel. It can rotate during a long session and only remains valid while the local `uvicorn` and SSH tunnel sessions are running. Refresh the UiPath Studio Web HTTP Request URL before a live demo if localhost.run prints a new tunnel URL.
 
 ## Tenant Notes
 
@@ -50,3 +50,4 @@ Note: this is a temporary localhost.run tunnel and only remains valid while the 
 - Returned decision: `ESCALATE_TO_HUMAN`
 - Returned risk level: `HIGH`
 - Evidence screenshot: `submission/screenshots/07-uipath-debug-success.png`
+- If the tunnel URL rotates after this screenshot, update the API Workflow URL and rerun debug before presenting a live tenant call.
