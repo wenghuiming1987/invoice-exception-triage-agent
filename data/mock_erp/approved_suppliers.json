@@ -1,0 +1,27 @@
+[
+  {
+    "supplier_id": "SUP-1001",
+    "supplier_name": "Northwind Office Supplies",
+    "tax_id": "US-12-3456789",
+    "default_currency": "USD"
+  },
+  {
+    "supplier_id": "SUP-1002",
+    "supplier_name": "Contoso Facilities",
+    "tax_id": "US-98-7654321",
+    "default_currency": "USD"
+  },
+  {
+    "supplier_id": "SUP-1003",
+    "supplier_name": "Fabrikam Industrial Parts",
+    "tax_id": "US-45-6789012",
+    "default_currency": "USD"
+  },
+  {
+    "supplier_id": "SUP-1004",
+    "supplier_name": "Alpine Analytics",
+    "tax_id": "US-67-8901234",
+    "default_currency": "EUR"
+  }
+]
+

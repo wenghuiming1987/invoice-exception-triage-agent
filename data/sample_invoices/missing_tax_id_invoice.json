@@ -1,0 +1,21 @@
+{
+  "invoice_id": "INV-2026-1003",
+  "supplier_id": "SUP-1002",
+  "supplier_name": "Contoso Facilities",
+  "supplier_tax_id": "",
+  "po_id": "PO-9002",
+  "invoice_amount": 2750.0,
+  "po_amount": 2800.0,
+  "currency": "USD",
+  "invoice_date": "2026-05-04",
+  "due_date": "2026-06-03",
+  "line_items": [
+    {
+      "description": "Monthly facilities service",
+      "quantity": 1,
+      "unit_price": 2750.0,
+      "line_total": 2750.0
+    }
+  ]
+}
+

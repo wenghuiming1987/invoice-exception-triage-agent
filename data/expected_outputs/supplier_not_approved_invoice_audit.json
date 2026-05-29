@@ -1,0 +1,55 @@
+{
+  "audit_summary": "Invoice INV-2026-1005 was evaluated against supplier, PO, duplicate, payment-term, and currency rules. 1 exception flag(s) were found: SUPPLIER_NOT_APPROVED (HIGH). Decision: ESCALATE_TO_HUMAN; risk level: HIGH.",
+  "decision": "ESCALATE_TO_HUMAN",
+  "invoice_id": "INV-2026-1005",
+  "machine_readable_flags": {
+    "currency_mismatch": false,
+    "duplicate_invoice_id": false,
+    "flag_codes": [
+      "SUPPLIER_NOT_APPROVED"
+    ],
+    "invoice_amount_exceeds_po_amount": false,
+    "invoice_id": "INV-2026-1005",
+    "missing_po": false,
+    "missing_tax_id": false,
+    "po_id": "PO-9005",
+    "rule_version": "2026.05",
+    "severity_counts": {
+      "HIGH": 1,
+      "LOW": 0,
+      "MEDIUM": 0
+    },
+    "supplier_id": "SUP-9999",
+    "supplier_not_approved": true,
+    "suspicious_payment_terms": false
+  },
+  "po_id": "PO-9005",
+  "reasons": [
+    "Supplier SUP-9999 is not in the approved supplier list."
+  ],
+  "recommended_action": "Create a human-in-the-loop approval task and hold ERP posting until the exception is resolved.",
+  "report_type": "invoice_exception_triage_audit",
+  "risk_level": "HIGH",
+  "source_invoice": {
+    "currency": "USD",
+    "due_date": "2026-06-06",
+    "invoice_amount": "1500.00",
+    "invoice_date": "2026-05-07",
+    "invoice_id": "INV-2026-1005",
+    "line_items": [
+      {
+        "description": "Expedited freight handling",
+        "line_total": 1500.0,
+        "quantity": 1,
+        "unit_price": 1500.0
+      }
+    ],
+    "po_amount": "1750.00",
+    "po_id": "PO-9005",
+    "supplier_id": "SUP-9999",
+    "supplier_name": "Unknown Expedite Services",
+    "supplier_tax_id": "US-00-9999999"
+  },
+  "supplier_id": "SUP-9999",
+  "supplier_name": "Unknown Expedite Services"
+}

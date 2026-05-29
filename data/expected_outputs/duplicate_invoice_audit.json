@@ -1,0 +1,55 @@
+{
+  "audit_summary": "Invoice INV-DUP-1002 was evaluated against supplier, PO, duplicate, payment-term, and currency rules. 1 exception flag(s) were found: DUPLICATE_INVOICE_ID (HIGH). Decision: ESCALATE_TO_HUMAN; risk level: HIGH.",
+  "decision": "ESCALATE_TO_HUMAN",
+  "invoice_id": "INV-DUP-1002",
+  "machine_readable_flags": {
+    "currency_mismatch": false,
+    "duplicate_invoice_id": true,
+    "flag_codes": [
+      "DUPLICATE_INVOICE_ID"
+    ],
+    "invoice_amount_exceeds_po_amount": false,
+    "invoice_id": "INV-DUP-1002",
+    "missing_po": false,
+    "missing_tax_id": false,
+    "po_id": "PO-9001",
+    "rule_version": "2026.05",
+    "severity_counts": {
+      "HIGH": 1,
+      "LOW": 0,
+      "MEDIUM": 0
+    },
+    "supplier_id": "SUP-1001",
+    "supplier_not_approved": false,
+    "suspicious_payment_terms": false
+  },
+  "po_id": "PO-9001",
+  "reasons": [
+    "Invoice ID INV-DUP-1002 already exists in the processed invoice history."
+  ],
+  "recommended_action": "Create a human-in-the-loop approval task and hold ERP posting until the exception is resolved.",
+  "report_type": "invoice_exception_triage_audit",
+  "risk_level": "HIGH",
+  "source_invoice": {
+    "currency": "USD",
+    "due_date": "2026-06-02",
+    "invoice_amount": "1188.50",
+    "invoice_date": "2026-05-03",
+    "invoice_id": "INV-DUP-1002",
+    "line_items": [
+      {
+        "description": "Office supply replenishment",
+        "line_total": 1188.5,
+        "quantity": 1,
+        "unit_price": 1188.5
+      }
+    ],
+    "po_amount": "1250.00",
+    "po_id": "PO-9001",
+    "supplier_id": "SUP-1001",
+    "supplier_name": "Northwind Office Supplies",
+    "supplier_tax_id": "US-12-3456789"
+  },
+  "supplier_id": "SUP-1001",
+  "supplier_name": "Northwind Office Supplies"
+}

@@ -1,0 +1,21 @@
+{
+  "invoice_id": "INV-2026-1007",
+  "supplier_id": "SUP-1001",
+  "supplier_name": "Northwind Office Supplies",
+  "supplier_tax_id": "US-12-3456789",
+  "po_id": "PO-9006",
+  "invoice_amount": 850.0,
+  "po_amount": 900.0,
+  "currency": "EUR",
+  "invoice_date": "2026-05-10",
+  "due_date": "2026-06-09",
+  "line_items": [
+    {
+      "description": "Replacement labels",
+      "quantity": 10,
+      "unit_price": 85.0,
+      "line_total": 850.0
+    }
+  ]
+}
+

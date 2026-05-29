@@ -1,0 +1,55 @@
+{
+  "audit_summary": "Invoice INV-2026-1004 was evaluated against supplier, PO, duplicate, payment-term, and currency rules. 1 exception flag(s) were found: INVOICE_AMOUNT_EXCEEDS_PO (HIGH). Decision: ESCALATE_TO_HUMAN; risk level: HIGH.",
+  "decision": "ESCALATE_TO_HUMAN",
+  "invoice_id": "INV-2026-1004",
+  "machine_readable_flags": {
+    "currency_mismatch": false,
+    "duplicate_invoice_id": false,
+    "flag_codes": [
+      "INVOICE_AMOUNT_EXCEEDS_PO"
+    ],
+    "invoice_amount_exceeds_po_amount": true,
+    "invoice_id": "INV-2026-1004",
+    "missing_po": false,
+    "missing_tax_id": false,
+    "po_id": "PO-9003",
+    "rule_version": "2026.05",
+    "severity_counts": {
+      "HIGH": 1,
+      "LOW": 0,
+      "MEDIUM": 0
+    },
+    "supplier_id": "SUP-1003",
+    "supplier_not_approved": false,
+    "suspicious_payment_terms": false
+  },
+  "po_id": "PO-9003",
+  "reasons": [
+    "Invoice amount 5100.00 exceeds PO amount 4500.00."
+  ],
+  "recommended_action": "Create a human-in-the-loop approval task and hold ERP posting until the exception is resolved.",
+  "report_type": "invoice_exception_triage_audit",
+  "risk_level": "HIGH",
+  "source_invoice": {
+    "currency": "USD",
+    "due_date": "2026-06-05",
+    "invoice_amount": "5100.00",
+    "invoice_date": "2026-05-06",
+    "invoice_id": "INV-2026-1004",
+    "line_items": [
+      {
+        "description": "Replacement conveyor parts",
+        "line_total": 5100.0,
+        "quantity": 3,
+        "unit_price": 1700.0
+      }
+    ],
+    "po_amount": "4500.00",
+    "po_id": "PO-9003",
+    "supplier_id": "SUP-1003",
+    "supplier_name": "Fabrikam Industrial Parts",
+    "supplier_tax_id": "US-45-6789012"
+  },
+  "supplier_id": "SUP-1003",
+  "supplier_name": "Fabrikam Industrial Parts"
+}

@@ -1,0 +1,55 @@
+{
+  "audit_summary": "Invoice INV-2026-1007 was evaluated against supplier, PO, duplicate, payment-term, and currency rules. 1 exception flag(s) were found: CURRENCY_MISMATCH (HIGH). Decision: ESCALATE_TO_HUMAN; risk level: HIGH.",
+  "decision": "ESCALATE_TO_HUMAN",
+  "invoice_id": "INV-2026-1007",
+  "machine_readable_flags": {
+    "currency_mismatch": true,
+    "duplicate_invoice_id": false,
+    "flag_codes": [
+      "CURRENCY_MISMATCH"
+    ],
+    "invoice_amount_exceeds_po_amount": false,
+    "invoice_id": "INV-2026-1007",
+    "missing_po": false,
+    "missing_tax_id": false,
+    "po_id": "PO-9006",
+    "rule_version": "2026.05",
+    "severity_counts": {
+      "HIGH": 1,
+      "LOW": 0,
+      "MEDIUM": 0
+    },
+    "supplier_id": "SUP-1001",
+    "supplier_not_approved": false,
+    "suspicious_payment_terms": false
+  },
+  "po_id": "PO-9006",
+  "reasons": [
+    "Invoice currency EUR does not match PO currency USD."
+  ],
+  "recommended_action": "Create a human-in-the-loop approval task and hold ERP posting until the exception is resolved.",
+  "report_type": "invoice_exception_triage_audit",
+  "risk_level": "HIGH",
+  "source_invoice": {
+    "currency": "EUR",
+    "due_date": "2026-06-09",
+    "invoice_amount": "850.00",
+    "invoice_date": "2026-05-10",
+    "invoice_id": "INV-2026-1007",
+    "line_items": [
+      {
+        "description": "Replacement labels",
+        "line_total": 850.0,
+        "quantity": 10,
+        "unit_price": 85.0
+      }
+    ],
+    "po_amount": "900.00",
+    "po_id": "PO-9006",
+    "supplier_id": "SUP-1001",
+    "supplier_name": "Northwind Office Supplies",
+    "supplier_tax_id": "US-12-3456789"
+  },
+  "supplier_id": "SUP-1001",
+  "supplier_name": "Northwind Office Supplies"
+}

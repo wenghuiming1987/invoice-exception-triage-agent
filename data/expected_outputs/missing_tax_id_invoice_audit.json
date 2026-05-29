@@ -1,0 +1,55 @@
+{
+  "audit_summary": "Invoice INV-2026-1003 was evaluated against supplier, PO, duplicate, payment-term, and currency rules. 1 exception flag(s) were found: MISSING_SUPPLIER_TAX_ID (MEDIUM). Decision: REVIEW_REQUIRED; risk level: MEDIUM.",
+  "decision": "REVIEW_REQUIRED",
+  "invoice_id": "INV-2026-1003",
+  "machine_readable_flags": {
+    "currency_mismatch": false,
+    "duplicate_invoice_id": false,
+    "flag_codes": [
+      "MISSING_SUPPLIER_TAX_ID"
+    ],
+    "invoice_amount_exceeds_po_amount": false,
+    "invoice_id": "INV-2026-1003",
+    "missing_po": false,
+    "missing_tax_id": true,
+    "po_id": "PO-9002",
+    "rule_version": "2026.05",
+    "severity_counts": {
+      "HIGH": 0,
+      "LOW": 0,
+      "MEDIUM": 1
+    },
+    "supplier_id": "SUP-1002",
+    "supplier_not_approved": false,
+    "suspicious_payment_terms": false
+  },
+  "po_id": "PO-9002",
+  "reasons": [
+    "Supplier tax ID is missing, so the invoice cannot be fully validated for tax compliance."
+  ],
+  "recommended_action": "Route the invoice to an AP analyst for targeted review of the flagged exception.",
+  "report_type": "invoice_exception_triage_audit",
+  "risk_level": "MEDIUM",
+  "source_invoice": {
+    "currency": "USD",
+    "due_date": "2026-06-03",
+    "invoice_amount": "2750.00",
+    "invoice_date": "2026-05-04",
+    "invoice_id": "INV-2026-1003",
+    "line_items": [
+      {
+        "description": "Monthly facilities service",
+        "line_total": 2750.0,
+        "quantity": 1,
+        "unit_price": 2750.0
+      }
+    ],
+    "po_amount": "2800.00",
+    "po_id": "PO-9002",
+    "supplier_id": "SUP-1002",
+    "supplier_name": "Contoso Facilities",
+    "supplier_tax_id": ""
+  },
+  "supplier_id": "SUP-1002",
+  "supplier_name": "Contoso Facilities"
+}

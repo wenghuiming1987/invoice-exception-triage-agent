@@ -1,0 +1,21 @@
+{
+  "invoice_id": "INV-DUP-1002",
+  "supplier_id": "SUP-7777",
+  "supplier_name": "Urgent Wire Vendor",
+  "supplier_tax_id": "",
+  "po_id": "PO-4040",
+  "invoice_amount": 9999.0,
+  "po_amount": 1000.0,
+  "currency": "EUR",
+  "invoice_date": "2026-05-09",
+  "due_date": "2026-05-08",
+  "line_items": [
+    {
+      "description": "Emergency consulting retainer",
+      "quantity": 1,
+      "unit_price": 9999.0,
+      "line_total": 9999.0
+    }
+  ]
+}
+

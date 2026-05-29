@@ -1,0 +1,21 @@
+{
+  "invoice_id": "INV-2026-1005",
+  "supplier_id": "SUP-9999",
+  "supplier_name": "Unknown Expedite Services",
+  "supplier_tax_id": "US-00-9999999",
+  "po_id": "PO-9005",
+  "invoice_amount": 1500.0,
+  "po_amount": 1750.0,
+  "currency": "USD",
+  "invoice_date": "2026-05-07",
+  "due_date": "2026-06-06",
+  "line_items": [
+    {
+      "description": "Expedited freight handling",
+      "quantity": 1,
+      "unit_price": 1500.0,
+      "line_total": 1500.0
+    }
+  ]
+}
+

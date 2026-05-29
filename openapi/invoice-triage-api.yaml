@@ -1,0 +1,311 @@
+openapi: 3.1.0
+info:
+  title: Invoice Exception Triage Agent API
+  version: 0.1.0
+  description: Deterministic invoice exception triage endpoint for UiPath API Workflow integration.
+servers:
+  - url: http://127.0.0.1:8000
+    description: Local demo server
+paths:
+  /health:
+    get:
+      summary: Health check
+      operationId: healthCheck
+      responses:
+        "200":
+          description: Service status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  service:
+                    type: string
+                    example: invoice-exception-triage-agent
+  /triage/invoice:
+    post:
+      summary: Triage an invoice exception
+      operationId: triageInvoice
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InvoiceRequest"
+            examples:
+              cleanInvoice:
+                summary: Clean invoice
+                value:
+                  invoice_id: INV-2026-1001
+                  supplier_id: SUP-1001
+                  supplier_name: Northwind Office Supplies
+                  supplier_tax_id: US-12-3456789
+                  po_id: PO-9001
+                  invoice_amount: 1240.0
+                  po_amount: 1250.0
+                  currency: USD
+                  invoice_date: "2026-05-01"
+                  due_date: "2026-05-31"
+                  line_items:
+                    - description: Printer paper cartons
+                      quantity: 40
+                      unit_price: 22.5
+                      line_total: 900.0
+              highRiskInvoice:
+                summary: Multiple high-risk flags
+                value:
+                  invoice_id: INV-DUP-1002
+                  supplier_id: SUP-7777
+                  supplier_name: Urgent Wire Vendor
+                  supplier_tax_id: ""
+                  po_id: PO-4040
+                  invoice_amount: 9999.0
+                  po_amount: 1000.0
+                  currency: EUR
+                  invoice_date: "2026-05-09"
+                  due_date: "2026-05-08"
+                  line_items:
+                    - description: Emergency consulting retainer
+                      quantity: 1
+                      unit_price: 9999.0
+                      line_total: 9999.0
+      responses:
+        "200":
+          description: Triage result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TriageResponse"
+              examples:
+                autoApprove:
+                  summary: LOW risk auto approval
+                  value:
+                    risk_level: LOW
+                    decision: AUTO_APPROVE
+                    reasons:
+                      - No exception indicators found.
+                    recommended_action: Approve the invoice for posting and schedule payment under standard AP controls.
+                    audit_summary: "Invoice INV-2026-1001 was evaluated against supplier, PO, duplicate, payment-term, and currency rules. No exceptions were found. Decision: AUTO_APPROVE; risk level: LOW."
+                    machine_readable_flags:
+                      duplicate_invoice_id: false
+                      missing_tax_id: false
+                      supplier_not_approved: false
+                      invoice_amount_exceeds_po_amount: false
+                      suspicious_payment_terms: false
+                      currency_mismatch: false
+                      missing_po: false
+                      flag_codes: []
+                      severity_counts:
+                        HIGH: 0
+                        MEDIUM: 0
+                        LOW: 0
+                      invoice_id: INV-2026-1001
+                      supplier_id: SUP-1001
+                      po_id: PO-9001
+                      rule_version: "2026.05"
+                humanEscalation:
+                  summary: HIGH risk human escalation
+                  value:
+                    risk_level: HIGH
+                    decision: ESCALATE_TO_HUMAN
+                    reasons:
+                      - Invoice ID INV-DUP-1002 already exists in the processed invoice history.
+                      - Supplier tax ID is missing, so the invoice cannot be fully validated for tax compliance.
+                      - Supplier SUP-7777 is not in the approved supplier list.
+                      - Purchase order PO-4040 was not found in the ERP purchase order extract.
+                      - Invoice amount 9999.00 exceeds PO amount 1000.00.
+                      - Due date is before the invoice date, which indicates invalid payment terms.
+                    recommended_action: Create a human-in-the-loop approval task and hold ERP posting until the exception is resolved.
+                    audit_summary: "Invoice INV-DUP-1002 was evaluated against supplier, PO, duplicate, payment-term, and currency rules. 6 exception flag(s) were found: DUPLICATE_INVOICE_ID (HIGH); MISSING_SUPPLIER_TAX_ID (MEDIUM); SUPPLIER_NOT_APPROVED (HIGH); MISSING_PO (HIGH); INVOICE_AMOUNT_EXCEEDS_PO (HIGH); SUSPICIOUS_PAYMENT_TERMS (MEDIUM). Decision: ESCALATE_TO_HUMAN; risk level: HIGH."
+                    machine_readable_flags:
+                      duplicate_invoice_id: true
+                      missing_tax_id: true
+                      supplier_not_approved: true
+                      invoice_amount_exceeds_po_amount: true
+                      suspicious_payment_terms: true
+                      currency_mismatch: false
+                      missing_po: true
+                      flag_codes:
+                        - DUPLICATE_INVOICE_ID
+                        - MISSING_SUPPLIER_TAX_ID
+                        - SUPPLIER_NOT_APPROVED
+                        - MISSING_PO
+                        - INVOICE_AMOUNT_EXCEEDS_PO
+                        - SUSPICIOUS_PAYMENT_TERMS
+                      severity_counts:
+                        HIGH: 4
+                        MEDIUM: 2
+                        LOW: 0
+                      invoice_id: INV-DUP-1002
+                      supplier_id: SUP-7777
+                      po_id: PO-4040
+                      rule_version: "2026.05"
+        "422":
+          description: Invalid invoice payload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  detail:
+                    type: string
+                    example: invoice_amount must be a valid number.
+components:
+  schemas:
+    InvoiceRequest:
+      type: object
+      required:
+        - invoice_id
+        - supplier_id
+        - supplier_name
+        - supplier_tax_id
+        - po_id
+        - invoice_amount
+        - po_amount
+        - currency
+        - invoice_date
+        - due_date
+        - line_items
+      properties:
+        invoice_id:
+          type: string
+          minLength: 1
+        supplier_id:
+          type: string
+          minLength: 1
+        supplier_name:
+          type: string
+          minLength: 1
+        supplier_tax_id:
+          type: string
+          description: May be empty; missing value becomes a risk flag.
+        po_id:
+          type: string
+          description: May be empty; missing value becomes a risk flag.
+        invoice_amount:
+          type: number
+          minimum: 0
+        po_amount:
+          type: number
+          minimum: 0
+        currency:
+          type: string
+          minLength: 3
+          maxLength: 3
+          example: USD
+        invoice_date:
+          type: string
+          format: date
+        due_date:
+          type: string
+          format: date
+        line_items:
+          type: array
+          items:
+            $ref: "#/components/schemas/LineItem"
+    LineItem:
+      type: object
+      properties:
+        description:
+          type: string
+        quantity:
+          type: number
+        unit_price:
+          type: number
+        line_total:
+          type: number
+      additionalProperties: true
+    TriageResponse:
+      type: object
+      required:
+        - risk_level
+        - decision
+        - reasons
+        - recommended_action
+        - audit_summary
+        - machine_readable_flags
+      properties:
+        risk_level:
+          type: string
+          enum: [LOW, MEDIUM, HIGH]
+        decision:
+          type: string
+          enum: [AUTO_APPROVE, REVIEW_REQUIRED, ESCALATE_TO_HUMAN]
+        reasons:
+          type: array
+          items:
+            type: string
+        recommended_action:
+          type: string
+        audit_summary:
+          type: string
+        machine_readable_flags:
+          $ref: "#/components/schemas/MachineReadableFlags"
+    MachineReadableFlags:
+      type: object
+      required:
+        - duplicate_invoice_id
+        - missing_tax_id
+        - supplier_not_approved
+        - invoice_amount_exceeds_po_amount
+        - suspicious_payment_terms
+        - currency_mismatch
+        - missing_po
+        - flag_codes
+        - severity_counts
+        - invoice_id
+        - supplier_id
+        - po_id
+        - rule_version
+      properties:
+        duplicate_invoice_id:
+          type: boolean
+        missing_tax_id:
+          type: boolean
+        supplier_not_approved:
+          type: boolean
+        invoice_amount_exceeds_po_amount:
+          type: boolean
+        suspicious_payment_terms:
+          type: boolean
+        currency_mismatch:
+          type: boolean
+        missing_po:
+          type: boolean
+        flag_codes:
+          type: array
+          items:
+            type: string
+            enum:
+              - DUPLICATE_INVOICE_ID
+              - MISSING_SUPPLIER_TAX_ID
+              - SUPPLIER_NOT_APPROVED
+              - INVOICE_AMOUNT_EXCEEDS_PO
+              - SUSPICIOUS_PAYMENT_TERMS
+              - CURRENCY_MISMATCH
+              - MISSING_PO
+        severity_counts:
+          type: object
+          required: [HIGH, MEDIUM, LOW]
+          properties:
+            HIGH:
+              type: integer
+              minimum: 0
+            MEDIUM:
+              type: integer
+              minimum: 0
+            LOW:
+              type: integer
+              minimum: 0
+        invoice_id:
+          type: string
+        supplier_id:
+          type: string
+        po_id:
+          type: string
+        rule_version:
+          type: string
+          example: "2026.05"

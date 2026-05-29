@@ -1,0 +1,59 @@
+{
+  "audit_summary": "Invoice INV-2026-1001 was evaluated against supplier, PO, duplicate, payment-term, and currency rules. No exceptions were found. Decision: AUTO_APPROVE; risk level: LOW.",
+  "decision": "AUTO_APPROVE",
+  "invoice_id": "INV-2026-1001",
+  "machine_readable_flags": {
+    "currency_mismatch": false,
+    "duplicate_invoice_id": false,
+    "flag_codes": [],
+    "invoice_amount_exceeds_po_amount": false,
+    "invoice_id": "INV-2026-1001",
+    "missing_po": false,
+    "missing_tax_id": false,
+    "po_id": "PO-9001",
+    "rule_version": "2026.05",
+    "severity_counts": {
+      "HIGH": 0,
+      "LOW": 0,
+      "MEDIUM": 0
+    },
+    "supplier_id": "SUP-1001",
+    "supplier_not_approved": false,
+    "suspicious_payment_terms": false
+  },
+  "po_id": "PO-9001",
+  "reasons": [
+    "No exception indicators found."
+  ],
+  "recommended_action": "Approve the invoice for posting and schedule payment under standard AP controls.",
+  "report_type": "invoice_exception_triage_audit",
+  "risk_level": "LOW",
+  "source_invoice": {
+    "currency": "USD",
+    "due_date": "2026-05-31",
+    "invoice_amount": "1240.00",
+    "invoice_date": "2026-05-01",
+    "invoice_id": "INV-2026-1001",
+    "line_items": [
+      {
+        "description": "Printer paper cartons",
+        "line_total": 900.0,
+        "quantity": 40,
+        "unit_price": 22.5
+      },
+      {
+        "description": "Ink cartridges",
+        "line_total": 340.0,
+        "quantity": 10,
+        "unit_price": 34.0
+      }
+    ],
+    "po_amount": "1250.00",
+    "po_id": "PO-9001",
+    "supplier_id": "SUP-1001",
+    "supplier_name": "Northwind Office Supplies",
+    "supplier_tax_id": "US-12-3456789"
+  },
+  "supplier_id": "SUP-1001",
+  "supplier_name": "Northwind Office Supplies"
+}
