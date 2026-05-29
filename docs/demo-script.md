@@ -2,6 +2,8 @@
 
 Target length: 4 minutes 30 seconds. Keep the video under 5 minutes.
 
+Prepared local demo video: `submission/demo/invoice-exception-triage-agent-demo.mp4`.
+
 ## Live Demo Path
 
 Use this path if recording quickly:

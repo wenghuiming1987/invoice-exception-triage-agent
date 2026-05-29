@@ -7,7 +7,7 @@ It combines:
 - a **Python coded agent** that makes deterministic invoice risk decisions;
 - **UiPath low-code orchestration design** for API Workflow, Maestro BPMN, Action Center, and Automation Cloud governance.
 
-The repository is runnable locally. It includes source code, tests, sample invoices, mock ERP data, expected audit outputs, an OpenAPI contract, UiPath setup notes, and a short demo script.
+The repository is runnable locally. It includes source code, tests, sample invoices, mock ERP data, expected audit outputs, an OpenAPI contract, UiPath setup notes, a short demo script, and a prepared local demo video asset under `submission/demo/`.
 
 ## 3-Minute Judge Path
 
@@ -228,6 +228,8 @@ Start -> Receive invoice -> Call triage API -> Decision gateway
 ```
 
 ## Demo Video Path
+
+Prepared local video: `submission/demo/invoice-exception-triage-agent-demo.mp4` (about 2 minutes 17 seconds).
 
 The fastest live demo:
 

@@ -103,6 +103,7 @@ Add final evidence links here before Devpost submission:
 - Screenshot: terminal output with `python -m pytest`: `submission/screenshots/01-tests-passing.png`
 - Screenshot: generated audit report: `submission/screenshots/04-audit-report.png`
 - Screenshot: UiPath Studio Web API Workflow debug success: `submission/screenshots/07-uipath-debug-success.png`
+- Demo video generated from Codex-prepared narration: `submission/demo/invoice-exception-triage-agent-demo.mp4`
 - Session export link or transcript: `TODO`
 - Devpost project evidence field: `TODO`
 

@@ -1,0 +1,50 @@
+[
+  {
+    "image": null,
+    "title": "Invoice Exception Triage Agent",
+    "caption": "UiPath AgentHack 2026 prototype: coded invoice triage agent plus UiPath orchestration.",
+    "narration": "This is Invoice Exception Triage Agent, a UiPath AgentHack prototype for accounts payable exception triage. It combines a Python coded agent with UiPath orchestration so clean invoices move quickly and risky invoices get human accountability."
+  },
+  {
+    "image": "submission/screenshots/05-uipath-flow.png",
+    "title": "Business Workflow",
+    "caption": "Start -> Receive invoice -> Call triage API -> Decision gateway -> Auto approve, review, or human escalation.",
+    "narration": "The workflow starts with a received invoice. UiPath calls the triage API, then a decision gateway branches to auto approval, analyst review, or human escalation. Every path ends with an audit record."
+  },
+  {
+    "image": "submission/screenshots/01-tests-passing.png",
+    "title": "Engineering Proof",
+    "caption": "35 tests pass across risk rules, decisions, audit output, sample coverage, and API compatibility.",
+    "narration": "The repository is not README-only. The test suite passes with thirty five tests covering risk rules, decisions, input validation, audit reports, expected outputs, and API compatibility for UiPath Studio Web."
+  },
+  {
+    "image": "submission/screenshots/02-clean-auto-approve.png",
+    "title": "Clean Invoice",
+    "caption": "Approved supplier, matching PO, valid tax ID, normal terms -> LOW risk and AUTO_APPROVE.",
+    "narration": "The clean invoice matches supplier and purchase order controls. It has no exception flags, so the agent returns low risk and auto approve. This is the straight through processing path."
+  },
+  {
+    "image": "submission/screenshots/03-risky-human-escalation.png",
+    "title": "Risky Invoice",
+    "caption": "Duplicate, missing tax ID, unapproved supplier, missing PO, amount over PO, invalid terms -> HIGH risk.",
+    "narration": "The risky invoice has multiple high risk indicators: duplicate invoice ID, missing tax ID, unapproved supplier, missing purchase order, amount over purchase order, and invalid payment terms. The decision is escalate to human."
+  },
+  {
+    "image": "submission/screenshots/04-audit-report.png",
+    "title": "Auditability",
+    "caption": "Plain-English reasons, recommended action, audit summary, machine-readable flags, and rule version.",
+    "narration": "For auditability, each result includes plain English reasons, a recommended action, a concise audit summary, machine readable flags, and a rule version. Technical failures never auto approve an invoice."
+  },
+  {
+    "image": "submission/screenshots/07-uipath-debug-success.png",
+    "title": "UiPath Studio Web Debug",
+    "caption": "Real Studio Web API Workflow call returns HTTP 200 with HIGH risk and ESCALATE_TO_HUMAN.",
+    "narration": "The UiPath Studio Web API Workflow was debug tested against a temporary HTTPS endpoint. The HTTP request completed successfully with status two hundred and returned high risk with escalate to human."
+  },
+  {
+    "image": "submission/screenshots/06-github-repo.png",
+    "title": "Submission Evidence",
+    "caption": "Public GitHub repository, MIT license, OpenAPI contract, Codex evidence, demo script, and reproducible setup docs.",
+    "narration": "The submission includes a public GitHub repository, MIT license, OpenAPI contract, sample data, expected outputs, UiPath setup documentation, a demo script, and Codex usage evidence integrated into the working solution."
+  }
+]

@@ -5,11 +5,12 @@ Use this as the final pre-submission gate. Items marked complete are satisfied b
 ## Required Submission Assets
 
 - [ ] Devpost project page created.
-- [ ] Public GitHub repository created and linked from Devpost.
+- [x] Public GitHub repository created: https://github.com/wenghuiming1987/invoice-exception-triage-agent
+- [ ] Public GitHub repository linked from Devpost.
 - [x] MIT license included in `LICENSE`.
 - [x] README included and judge-readable in under 3 minutes.
 - [x] Setup instructions included in `README.md`.
-- [ ] Demo video recorded and kept under 5 minutes.
+- [x] Demo video recorded and kept under 5 minutes: `submission/demo/invoice-exception-triage-agent-demo.mp4`.
 - [x] Presentation deck prepared or attached if required by the submission phase.
 - [x] Screenshots attached to Devpost or stored in a submission folder.
 - [x] Codex evidence included in `docs/codex-evidence/`.
@@ -66,7 +67,7 @@ Use this as the final pre-submission gate. Items marked complete are satisfied b
 | --- | --- |
 | Working solution, not a concept | CLI, Python package, tests, sample outputs. |
 | Public repository readiness | README, license, setup, docs, tests. |
-| Demo video under 5 minutes | `docs/demo-script.md`. |
+| Demo video under 5 minutes | `docs/demo-script.md` and `submission/demo/invoice-exception-triage-agent-demo.mp4`. |
 | Enterprise workflow complexity | Invoice exception triage with AP review and human escalation. |
 | UiPath platform usage | API Workflow, Maestro BPMN, Action Center, Automation Cloud governance docs. |
 | Human-in-the-loop | `ESCALATE_TO_HUMAN` branch and Action Center task notes. |

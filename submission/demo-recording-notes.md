@@ -4,6 +4,8 @@
 
 Keep the video under 5 minutes and show a real working path:
 
+Generated local video: `submission/demo/invoice-exception-triage-agent-demo.mp4`
+
 1. tests pass;
 2. clean invoice auto-approved;
 3. risky invoice escalated to human;
@@ -30,4 +32,3 @@ python -m invoice_agent --invoice data/sample_invoices/multiple_high_risk_flags_
 - `uipath/api-workflow-contract.md`
 - `docs/codex-evidence/codex-usage.md`
 - `docs/submission-checklist.md`
-

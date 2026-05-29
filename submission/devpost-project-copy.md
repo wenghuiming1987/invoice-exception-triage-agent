@@ -1,6 +1,6 @@
 # Devpost Project Copy
 
-Use this as the source text for the Devpost page. Update the GitHub, video, and screenshot links after those assets are published.
+Use this as the source text for the Devpost page. The GitHub repository is public. Upload the local demo video file to Devpost, then replace the local file note below with the published video URL if Devpost provides one.
 
 ## Project Title
 
@@ -113,4 +113,8 @@ https://github.com/wenghuiming1987/invoice-exception-triage-agent
 
 ## Demo Video
 
-TODO: add video URL.
+Local upload file:
+
+`submission/demo/invoice-exception-triage-agent-demo.mp4`
+
+Duration: about 2 minutes 17 seconds.
