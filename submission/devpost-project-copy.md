@@ -109,9 +109,8 @@ Agentic business workflows need both automation and governance. The coded agent 
 
 ## Repository
 
-TODO: add public GitHub URL.
+https://github.com/wenghuiming1987/invoice-exception-triage-agent
 
 ## Demo Video
 
 TODO: add video URL.
-

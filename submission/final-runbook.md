@@ -22,7 +22,8 @@ Expected:
 - [ ] Initialize git repository.
 - [ ] Commit all submission files.
 - [ ] Create public GitHub repository.
-- [ ] Push default branch.
+- [x] Create public GitHub repository: https://github.com/wenghuiming1987/invoice-exception-triage-agent
+- [x] Push default branch.
 - [ ] Confirm README renders correctly.
 - [ ] Add GitHub URL to Devpost.
 
@@ -49,4 +50,3 @@ Expected:
 - [ ] Add Codex evidence note.
 - [ ] Final review with user.
 - [ ] User confirms final submit.
-
