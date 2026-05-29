@@ -11,7 +11,9 @@ Use this as the final pre-submission gate. Items marked complete are satisfied b
 - [x] README included and judge-readable in under 3 minutes.
 - [x] Setup instructions included in `README.md`.
 - [x] Demo video recorded and kept under 5 minutes: `submission/demo/invoice-exception-triage-agent-demo.mp4`.
+- [ ] Demo video uploaded to YouTube, Vimeo, or Youku and linked from Devpost.
 - [x] Presentation deck prepared or attached if required by the submission phase.
+- [x] Presentation deck link prepared: https://github.com/wenghuiming1987/invoice-exception-triage-agent/blob/main/submission/deck/invoice-exception-triage-agent.pptx
 - [x] Screenshots attached to Devpost or stored in a submission folder.
 - [x] Codex evidence included in `docs/codex-evidence/`.
 - [x] Sample data included in `data/sample_invoices/` and `data/mock_erp/`.
@@ -67,7 +69,7 @@ Use this as the final pre-submission gate. Items marked complete are satisfied b
 | --- | --- |
 | Working solution, not a concept | CLI, Python package, tests, sample outputs. |
 | Public repository readiness | README, license, setup, docs, tests. |
-| Demo video under 5 minutes | `docs/demo-script.md` and `submission/demo/invoice-exception-triage-agent-demo.mp4`. |
+| Demo video under 5 minutes | `docs/demo-script.md` and `submission/demo/invoice-exception-triage-agent-demo.mp4`; published video link still needs to be added to Devpost. |
 | Enterprise workflow complexity | Invoice exception triage with AP review and human escalation. |
 | UiPath platform usage | API Workflow, Maestro BPMN, Action Center, Automation Cloud governance docs. |
 | Human-in-the-loop | `ESCALATE_TO_HUMAN` branch and Action Center task notes. |

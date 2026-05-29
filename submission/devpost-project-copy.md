@@ -1,6 +1,6 @@
 # Devpost Project Copy
 
-Use this as the source text for the Devpost page. The GitHub repository is public. Upload the local demo video file to Devpost, then replace the local file note below with the published video URL if Devpost provides one.
+Use this as the source text for the Devpost page. The GitHub repository is public. Upload the local demo video file to YouTube, Vimeo, or Youku, then replace the local file note below with the published video link required by Devpost.
 
 ## Project Title
 
@@ -113,8 +113,16 @@ https://github.com/wenghuiming1987/invoice-exception-triage-agent
 
 ## Demo Video
 
-Local upload file:
+Local source file:
 
 `submission/demo/invoice-exception-triage-agent-demo.mp4`
 
 Duration: about 2 minutes 17 seconds.
+
+Devpost-required published video URL: `TODO`
+
+## Presentation Deck
+
+GitHub deck link:
+
+https://github.com/wenghuiming1987/invoice-exception-triage-agent/blob/main/submission/deck/invoice-exception-triage-agent.pptx
