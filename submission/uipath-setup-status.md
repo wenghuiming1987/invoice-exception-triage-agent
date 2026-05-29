@@ -6,11 +6,11 @@ Update this file as the real UiPath setup progresses.
 
 Minimum strong submission target:
 
-- [ ] Real UiPath Studio Web API Workflow calls the coded agent HTTPS endpoint.
+- [x] Real UiPath Studio Web API Workflow calls the coded agent HTTPS endpoint.
 - [x] Public HTTPS endpoint tested from local machine.
 - [x] Clean invoice returns `AUTO_APPROVE` from local API.
 - [x] Risky invoice returns `ESCALATE_TO_HUMAN` from public HTTPS endpoint.
-- [ ] Screenshot captured.
+- [x] Screenshot captured.
 
 Enhanced target:
 
@@ -30,14 +30,23 @@ http://127.0.0.1:8000/triage/invoice
 Public HTTPS endpoint:
 
 ```text
-https://53962868a6f7eb.lhr.life/triage/invoice
+https://bf5b9a90a3340d.lhr.life/triage/invoice
 ```
 
 Note: this is a temporary localhost.run tunnel and only remains valid while the local `uvicorn` and SSH tunnel sessions are running.
 
 ## Tenant Notes
 
-- UiPath account: TODO
-- Tenant / folder: TODO
-- Studio Web API Workflow name: `Invoice Triage API`
+- UiPath account: `authur`
+- Tenant / folder: default Studio Web workspace observed in Automation Cloud.
+- Studio Web API Workflow name: `API Workflow`
 - Maestro process name: `Invoice Exception Triage`
+
+## Verified Studio Web Debug Result
+
+- Date/time: 2026-05-30 Asia/Shanghai
+- Result: UiPath Studio Web API Workflow debug completed with HTTP Request `Successful`.
+- Status code: `200`
+- Returned decision: `ESCALATE_TO_HUMAN`
+- Returned risk level: `HIGH`
+- Evidence screenshot: `submission/screenshots/07-uipath-debug-success.png`

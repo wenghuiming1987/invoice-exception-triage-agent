@@ -22,6 +22,18 @@ POST https://<approved-host>/triage/invoice
 
 Use an approved HTTPS host or demo tunnel if UiPath Automation Cloud must reach a local machine. Store base URL and credentials in tenant-approved assets or secret configuration.
 
+## Studio Web Body Expression
+
+For a standard API client, send the invoice as the JSON object shown below.
+
+For UiPath Studio Web's HTTP Request activity, set the Body expression to:
+
+```javascript
+JSON.stringify(invoicePayload)
+```
+
+The API also accepts this UiPath stringified body form and normalizes it back into the same invoice object before rule evaluation.
+
 ## Headers
 
 ```text
@@ -206,4 +218,3 @@ HTTP `200`: parse `triageResponse` and continue to the business decision gateway
 HTTP `422`: invoice JSON is malformed or missing required fields. Route to the technical validation lane.
 
 Timeout or non-2xx response: retry according to tenant policy, then route to operations support. Do not auto-approve when the API call fails.
-

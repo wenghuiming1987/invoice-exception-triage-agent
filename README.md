@@ -206,6 +206,8 @@ curl -s http://127.0.0.1:8000/triage/invoice \
 
 OpenAPI contract: `openapi/invoice-triage-api.yaml`.
 
+For UiPath Studio Web HTTP Request activities, use `JSON.stringify(invoicePayload)` as the Body expression. The API accepts both a normal invoice JSON object and this UiPath stringified JSON form.
+
 ## UiPath Integration
 
 Practical setup docs:
@@ -213,6 +215,8 @@ Practical setup docs:
 - `uipath/studio-web-setup.md`: Studio Web / API Workflow checklist.
 - `uipath/api-workflow-contract.md`: exact request and response examples.
 - `uipath/maestro-bpmn-notes.md`: BPMN-style flow and branch conditions.
+
+Current tenant status: a UiPath Studio Web API Workflow has been configured and debug-tested against a temporary HTTPS tunnel. Maestro and Action Center are documented as reproducible setup steps, not claimed as deployed runtime artifacts.
 
 Recommended Maestro flow:
 
@@ -268,4 +272,3 @@ The Codex-generated output is integrated into the working project through source
 ## License
 
 MIT. See `LICENSE`.
-

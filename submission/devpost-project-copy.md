@@ -83,7 +83,7 @@ The prototype reduces AP queue noise by letting clean invoices move forward auto
 
 ## Challenges
 
-The main challenge was keeping the solution demo-ready while avoiding fake deployment claims. The repository therefore separates what is fully runnable locally from the UiPath tenant setup steps and documents exactly how to reproduce the cloud workflow.
+The main challenge was keeping the solution demo-ready while avoiding fake deployment claims. The repository separates the fully runnable coded agent and tested UiPath Studio Web API Workflow from the Maestro and Action Center setup notes that explain how to reproduce the broader cloud workflow.
 
 ## Accomplishments
 

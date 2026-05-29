@@ -34,7 +34,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/InvoiceRequest"
+              oneOf:
+                - $ref: "#/components/schemas/InvoiceRequest"
+                - $ref: "#/components/schemas/StringifiedInvoiceRequest"
+              description: Accepts the normal invoice JSON object. The string form is included for UiPath Studio Web HTTP Request compatibility when the Body expression is JSON.stringify(invoicePayload).
             examples:
               cleanInvoice:
                 summary: Clean invoice
@@ -206,6 +209,9 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/LineItem"
+    StringifiedInvoiceRequest:
+      type: string
+      description: JSON string containing an InvoiceRequest object. Intended for UiPath Studio Web HTTP Request Body expressions that use JSON.stringify(...); the service also handles this form when UiPath transmits it as raw request bytes.
     LineItem:
       type: object
       properties:

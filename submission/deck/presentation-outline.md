@@ -28,6 +28,7 @@ Start -> Receive invoice -> Call triage API -> Decision gateway -> Auto approve 
 - Tests passing.
 - Clean invoice: `AUTO_APPROVE`.
 - Risky invoice: `ESCALATE_TO_HUMAN`.
+- UiPath Studio Web API Workflow debug: HTTP `200`.
 - Audit report with reasons and flags.
 
 ## Slide 6: UiPath Fit
@@ -48,4 +49,3 @@ Start -> Receive invoice -> Call triage API -> Decision gateway -> Auto approve 
 - Add authentication.
 - Add document extraction intake.
 - Add AP metrics dashboard.
-

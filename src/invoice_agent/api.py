@@ -13,10 +13,32 @@ from .extraction import InvoiceValidationError, load_invoice
 from .risk_rules import load_reference_data
 
 try:  # FastAPI is optional so the CLI remains dependency-light.
-    from fastapi import FastAPI, HTTPException
+    from fastapi import Body, FastAPI, HTTPException
 except ImportError:  # pragma: no cover - exercised only when FastAPI is absent.
+    Body = None
     FastAPI = None
     HTTPException = None
+
+
+def normalize_api_payload(payload: Any) -> dict[str, Any]:
+    """Normalize direct JSON objects and UiPath stringified JSON bodies."""
+    candidate = payload
+    for _ in range(8):
+        if isinstance(candidate, (bytes, bytearray)):
+            candidate = candidate.decode("utf-8")
+            continue
+        if isinstance(candidate, dict):
+            return candidate
+        if not isinstance(candidate, str):
+            break
+        try:
+            candidate = json.loads(candidate)
+        except json.JSONDecodeError as exc:
+            raise InvoiceValidationError(
+                "Request body must be an invoice JSON object or a JSON string containing an invoice object."
+            ) from exc
+
+    raise InvoiceValidationError("Request body must resolve to an invoice JSON object.")
 
 
 def create_app() -> Any:
@@ -34,9 +56,9 @@ def create_app() -> Any:
         return {"status": "ok", "service": "invoice-exception-triage-agent"}
 
     @api.post("/triage/invoice")
-    def triage_endpoint(payload: dict[str, Any]) -> dict[str, Any]:
+    def triage_endpoint(payload: Any = Body(...)) -> dict[str, Any]:
         try:
-            return triage_invoice(payload)
+            return triage_invoice(normalize_api_payload(payload))
         except InvoiceValidationError as exc:
             raise HTTPException(status_code=422, detail=str(exc)) from exc
 
@@ -73,4 +95,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

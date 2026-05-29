@@ -10,8 +10,8 @@ Use this as the final pre-submission gate. Items marked complete are satisfied b
 - [x] README included and judge-readable in under 3 minutes.
 - [x] Setup instructions included in `README.md`.
 - [ ] Demo video recorded and kept under 5 minutes.
-- [ ] Presentation deck prepared or attached if required by the submission phase.
-- [ ] Screenshots attached to Devpost or stored in a submission folder.
+- [x] Presentation deck prepared or attached if required by the submission phase.
+- [x] Screenshots attached to Devpost or stored in a submission folder.
 - [x] Codex evidence included in `docs/codex-evidence/`.
 - [x] Sample data included in `data/sample_invoices/` and `data/mock_erp/`.
 - [x] Tests passing locally with `python -m pytest`.
@@ -23,8 +23,8 @@ Use this as the final pre-submission gate. Items marked complete are satisfied b
 - [x] Maestro BPMN-style flow documented in `uipath/maestro-bpmn-notes.md`.
 - [x] Human-in-the-loop branch documented for Action Center.
 - [x] Technical exception lane documented.
-- [ ] UiPath Automation Cloud running flow configured in a tenant.
-- [ ] API Workflow tested from UiPath Studio Web against hosted endpoint.
+- [x] UiPath Automation Cloud running flow configured in a tenant.
+- [x] API Workflow tested from UiPath Studio Web against hosted endpoint.
 - [ ] Maestro process tested with clean, medium-risk, and high-risk payloads.
 - [ ] Action Center approval task screenshot captured.
 
@@ -85,8 +85,7 @@ python -m invoice_agent --invoice data/sample_invoices/multiple_high_risk_flags_
 
 ## Final No-Fake-Claims Check
 
-- [x] README says no UiPath tenant deployment is included.
+- [x] README distinguishes the tested Studio Web API Workflow from Maestro / Action Center setup notes.
 - [x] UiPath docs describe how to reproduce the flow.
 - [x] Demo script distinguishes local prototype from tenant deployment.
-- [ ] If a real UiPath tenant flow is later built, add screenshots and update this checklist.
-
+- [x] Real UiPath Studio Web API Workflow debug evidence added in `submission/uipath-setup-status.md`.

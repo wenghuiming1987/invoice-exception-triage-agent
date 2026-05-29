@@ -27,6 +27,7 @@ Tests:
 - `tests/test_audit_report.py`
 - `tests/test_extraction.py`
 - `tests/test_expected_outputs.py`
+- `tests/test_api.py`
 
 Sample and reference data:
 
@@ -58,6 +59,7 @@ Codex helped:
 - create tests for rules, input validation, deterministic outputs, and sample coverage;
 - write an OpenAPI contract matching the implemented endpoint;
 - document how UiPath API Workflow and Maestro BPMN can call and route the coded agent;
+- configure and debug a real UiPath Studio Web API Workflow against a temporary HTTPS endpoint;
 - harden the README and demo script for judge review.
 
 ## Meaningful Integration Into The Working Project
@@ -70,6 +72,7 @@ The Codex-generated output is not a separate note or mockup. It is integrated in
 - The expected outputs under `data/expected_outputs/` are reproducible from the current engine and guarded by tests.
 - The OpenAPI contract documents the same request and response fields returned by `triage_invoice`.
 - The UiPath docs explain how the response fields drive Maestro branching and Action Center approval.
+- The Studio Web debug evidence shows the UiPath API Workflow calling the coded agent and receiving `ESCALATE_TO_HUMAN`.
 
 ## Verification Evidence
 
@@ -82,7 +85,7 @@ python -m pytest
 Latest local result during hardening:
 
 ```text
-30 passed
+35 passed
 ```
 
 Sample CLI verification:
@@ -97,11 +100,12 @@ python -m invoice_agent --invoice data/sample_invoices/multiple_high_risk_flags_
 Add final evidence links here before Devpost submission:
 
 - Screenshot: Codex session showing repository creation and test run: `TODO`
-- Screenshot: terminal output with `python -m pytest`: `TODO`
-- Screenshot: generated audit report: `TODO`
+- Screenshot: terminal output with `python -m pytest`: `submission/screenshots/01-tests-passing.png`
+- Screenshot: generated audit report: `submission/screenshots/04-audit-report.png`
+- Screenshot: UiPath Studio Web API Workflow debug success: `submission/screenshots/07-uipath-debug-success.png`
 - Session export link or transcript: `TODO`
 - Devpost project evidence field: `TODO`
 
 ## Boundary
 
-Codex assisted with implementation and documentation. This repository does not claim that Codex deployed a UiPath tenant workflow, created tenant credentials, or published a live Automation Cloud process.
+Codex assisted with implementation, documentation, and Studio Web API Workflow setup. This repository claims a tested UiPath Studio Web API Workflow call, but does not claim a deployed Maestro or Action Center production process.

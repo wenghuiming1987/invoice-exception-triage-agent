@@ -10,7 +10,7 @@ Use this path if recording quickly:
 2. Run clean invoice -> show `AUTO_APPROVE`.
 3. Run risky invoice -> show `ESCALATE_TO_HUMAN`.
 4. Open generated audit report.
-5. Show UiPath BPMN/API docs.
+5. Show UiPath Studio Web debug output and BPMN/API docs.
 6. Show Codex evidence.
 
 ## 0:00-0:25 - Business Problem
@@ -51,7 +51,7 @@ Narration:
 Expected:
 
 ```text
-30 passed
+35 passed
 ```
 
 ## 1:20-2:05 - Clean Invoice Auto-Approved
@@ -103,13 +103,14 @@ Business impact:
 
 Show:
 
+- `submission/screenshots/07-uipath-debug-success.png`;
 - `uipath/maestro-bpmn-notes.md`;
 - `uipath/studio-web-setup.md`;
 - `uipath/api-workflow-contract.md`.
 
 Narration:
 
-"In UiPath, the API Workflow sends the invoice JSON and receives the triage response. Maestro uses a decision gateway: AUTO_APPROVE goes to ERP posting, REVIEW_REQUIRED goes to AP analyst review, and ESCALATE_TO_HUMAN creates an Action Center approval task."
+"In UiPath, the Studio Web API Workflow calls the coded agent through HTTPS and receives a 200 response with HIGH risk and ESCALATE_TO_HUMAN. Maestro then uses the documented decision gateway: AUTO_APPROVE goes to ERP posting, REVIEW_REQUIRED goes to AP analyst review, and ESCALATE_TO_HUMAN creates an Action Center approval task."
 
 ## 3:35-4:05 - Audit And Exception Handling
 

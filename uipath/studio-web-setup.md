@@ -52,7 +52,8 @@ Expected:
   - Headers:
     - `Content-Type: application/json`
     - `Accept: application/json`
-  - Body: `invoicePayload`
+  - Body for a workflow input object: `JSON.stringify(invoicePayload)`
+  - Body for a hardcoded Studio Web debug sample: `JSON.stringify({ invoice_id: "INV-DUP-1002", supplier_id: "SUP-7777", ... })`
 - [ ] Parse the response body as JSON.
 - [ ] Assign parsed response to `triageResponse`.
 - [ ] Return `triageResponse` from the workflow.
@@ -129,4 +130,3 @@ For `ESCALATE_TO_HUMAN`:
 - [ ] Non-2xx responses do not auto-approve invoices.
 - [ ] Full `triageResponse` is logged or attached to the case.
 - [ ] Demo script does not imply the UiPath flow is deployed unless these steps have actually been completed.
-

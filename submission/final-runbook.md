@@ -13,7 +13,7 @@ python -m invoice_agent --invoice data/sample_invoices/multiple_high_risk_flags_
 
 Expected:
 
-- `30 passed`
+- `35 passed`
 - clean invoice: `AUTO_APPROVE`
 - risky invoice: `ESCALATE_TO_HUMAN`
 
@@ -29,14 +29,14 @@ Expected:
 
 ## UiPath
 
-- [ ] Start coded agent API.
-- [ ] Expose API through HTTPS.
-- [ ] Create Studio Web API Workflow.
+- [x] Start coded agent API.
+- [x] Expose API through HTTPS.
+- [x] Create Studio Web API Workflow.
 - [ ] Test clean invoice.
-- [ ] Test high-risk invoice.
+- [x] Test high-risk invoice.
 - [ ] Add Maestro BPMN flow if tenant supports it.
 - [ ] Add Action Center task if tenant supports it.
-- [ ] Capture screenshots.
+- [x] Capture screenshots.
 
 ## Devpost
 
