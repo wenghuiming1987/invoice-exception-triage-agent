@@ -231,6 +231,8 @@ Start -> Receive invoice -> Call triage API -> Decision gateway
 
 Prepared local video: `submission/demo/invoice-exception-triage-agent-demo.mp4` (about 2 minutes 17 seconds).
 
+Published demo video: https://youtu.be/3wf-Y2KLSe4
+
 The fastest live demo:
 
 1. Run tests.

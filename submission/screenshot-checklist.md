@@ -10,6 +10,8 @@ Save final screenshots under `submission/screenshots/`.
 - [x] `04-audit-report.png`: generated evidence image with reasons and flags.
 - [x] `05-uipath-flow.png`: generated BPMN-style UiPath flow image.
 - [x] `07-uipath-debug-success.png`: Studio Web API Workflow debug output showing HTTP `200`, `HIGH`, and `ESCALATE_TO_HUMAN`.
+- [x] `08-devpost-ready-to-submit.png`: Devpost final submit page before user confirmation.
+- [x] `09-youtube-video-published.png`: YouTube unlisted demo video published evidence.
 - [ ] `06-uipath-api-workflow.png`: Studio Web API Workflow configuration.
 - [ ] `07-uipath-maestro-branching.png`: Maestro BPMN decision gateway or flow view.
 - [ ] `08-action-center-task.png`: Action Center human approval task, if available.

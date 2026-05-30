@@ -119,7 +119,9 @@ Local source file:
 
 Duration: about 2 minutes 17 seconds.
 
-Devpost-required published video URL: `TODO`
+Devpost-required published video URL:
+
+https://youtu.be/3wf-Y2KLSe4
 
 ## Presentation Deck
 

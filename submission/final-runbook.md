@@ -23,7 +23,8 @@ Expected:
 - [x] Duration verified under 5 minutes: about 2 minutes 17 seconds.
 - [x] Narration source saved: `submission/demo/demo-narration.json`
 - [x] YouTube upload metadata prepared: `submission/demo/youtube-upload-metadata.md`
-- [ ] Upload video to YouTube, Vimeo, or Youku and use that link in Devpost.
+- [x] Uploaded to YouTube as unlisted: https://youtu.be/3wf-Y2KLSe4
+- [x] Added video link to Devpost draft.
 
 ## GitHub
 
@@ -32,7 +33,7 @@ Expected:
 - [x] Create public GitHub repository: https://github.com/wenghuiming1987/invoice-exception-triage-agent
 - [x] Push default branch.
 - [x] Confirm public GitHub repository is visible.
-- [ ] Add GitHub URL to Devpost.
+- [x] Add GitHub URL to Devpost.
 
 ## UiPath
 
@@ -49,12 +50,12 @@ Expected:
 
 - [x] Create draft project page.
 - [x] Add title and tagline.
-- [ ] Paste project copy from `submission/devpost-project-copy.md`.
-- [ ] Add public GitHub repository.
-- [ ] Add published demo video link after uploading `submission/demo/invoice-exception-triage-agent-demo.mp4`.
-- [ ] Add screenshots.
-- [ ] Add presentation deck link.
-- [ ] Add license note.
-- [ ] Add Codex evidence note.
+- [x] Paste project story based on `submission/devpost-project-copy.md`.
+- [x] Add public GitHub repository.
+- [x] Add published demo video link.
+- [x] Add screenshots.
+- [x] Add presentation deck link.
+- [x] Add Codex evidence note in project story.
+- [x] Fill additional info and reach final submit page.
 - [ ] Final review with user.
 - [ ] User confirms final submit.
