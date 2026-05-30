@@ -1,21 +1,21 @@
 # UiPath AgentHack Submission Checklist
 
-Use this as the final pre-submission gate. Items marked complete are satisfied by this repository. Items left open require external Devpost, GitHub, video, deck, screenshot, or UiPath tenant work.
+Use this as the final submission record. Items left open are optional tenant enhancements beyond the submitted working prototype.
 
 ## Required Submission Assets
 
 - [x] Devpost draft project page created.
-- [ ] Devpost final submission completed.
+- [x] Devpost final submission completed: https://devpost.com/software/invoice-exception-triage-agent
 - [x] Public GitHub repository created: https://github.com/wenghuiming1987/invoice-exception-triage-agent
-- [x] Public GitHub repository linked from Devpost draft.
+- [x] Public GitHub repository linked from Devpost.
 - [x] MIT license included in `LICENSE`.
 - [x] README included and judge-readable in under 3 minutes.
 - [x] Setup instructions included in `README.md`.
 - [x] Demo video recorded and kept under 5 minutes: `submission/demo/invoice-exception-triage-agent-demo.mp4`.
-- [x] Demo video uploaded to YouTube as unlisted and linked from Devpost draft: https://youtu.be/3wf-Y2KLSe4
+- [x] Demo video uploaded to YouTube as unlisted and linked from Devpost: https://youtu.be/3wf-Y2KLSe4
 - [x] Presentation deck prepared or attached if required by the submission phase.
 - [x] Presentation deck link prepared: https://github.com/wenghuiming1987/invoice-exception-triage-agent/blob/main/submission/deck/invoice-exception-triage-agent.pptx
-- [x] Screenshots attached to Devpost draft and stored in `submission/screenshots/`.
+- [x] Screenshots attached to Devpost and stored in `submission/screenshots/`.
 - [x] Codex evidence included in `docs/codex-evidence/`.
 - [x] Sample data included in `data/sample_invoices/` and `data/mock_erp/`.
 - [x] Tests passing locally with `python -m pytest`.

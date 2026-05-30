@@ -95,11 +95,10 @@ python -m invoice_agent --invoice data/sample_invoices/clean_invoice.json --outp
 python -m invoice_agent --invoice data/sample_invoices/multiple_high_risk_flags_invoice.json --output reports/risky_invoice_audit.json
 ```
 
-## Screenshot / Session Export Placeholders
+## Screenshot / Session Export Evidence
 
-Add final evidence links here before Devpost submission:
+Final evidence links:
 
-- Screenshot: Codex session showing repository creation and test run: `TODO`
 - Screenshot: terminal output with `python -m pytest`: `submission/screenshots/01-tests-passing.png`
 - Screenshot: generated audit report: `submission/screenshots/04-audit-report.png`
 - Screenshot: UiPath Studio Web API Workflow debug success: `submission/screenshots/07-uipath-debug-success.png`
@@ -107,8 +106,9 @@ Add final evidence links here before Devpost submission:
 - Published demo video: https://youtu.be/3wf-Y2KLSe4
 - Screenshot: Devpost ready-to-submit page: `submission/screenshots/08-devpost-ready-to-submit.png`
 - Screenshot: YouTube video published/unlisted evidence: `submission/screenshots/09-youtube-video-published.png`
-- Session export link or transcript: `TODO`
-- Devpost project evidence field: `TODO`
+- Screenshot: Devpost submitted project page: `submission/screenshots/10-devpost-submitted.png`
+- Devpost project: https://devpost.com/software/invoice-exception-triage-agent
+- Session export link or transcript: not exported in this repository.
 
 ## Boundary
 

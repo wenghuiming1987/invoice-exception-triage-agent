@@ -1,6 +1,10 @@
 # Devpost Project Copy
 
-Use this as the source text for the Devpost page. The GitHub repository is public. Upload the local demo video file to YouTube, Vimeo, or Youku, then replace the local file note below with the published video link required by Devpost.
+This is the source text used for the submitted Devpost page.
+
+Submitted Devpost project:
+
+https://devpost.com/software/invoice-exception-triage-agent
 
 ## Project Title
 

@@ -233,6 +233,8 @@ Prepared local video: `submission/demo/invoice-exception-triage-agent-demo.mp4` 
 
 Published demo video: https://youtu.be/3wf-Y2KLSe4
 
+Submitted Devpost project: https://devpost.com/software/invoice-exception-triage-agent
+
 The fastest live demo:
 
 1. Run tests.

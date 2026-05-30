@@ -49,6 +49,7 @@ Expected:
 ## Devpost
 
 - [x] Create draft project page.
+- [x] Submit project: https://devpost.com/software/invoice-exception-triage-agent
 - [x] Add title and tagline.
 - [x] Paste project story based on `submission/devpost-project-copy.md`.
 - [x] Add public GitHub repository.
@@ -57,5 +58,5 @@ Expected:
 - [x] Add presentation deck link.
 - [x] Add Codex evidence note in project story.
 - [x] Fill additional info and reach final submit page.
-- [ ] Final review with user.
-- [ ] User confirms final submit.
+- [x] Final review with user.
+- [x] User confirms final submit.
