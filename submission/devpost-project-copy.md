@@ -126,9 +126,7 @@ Duration: about 2 minutes 6 seconds.
 
 Devpost-required published video URL:
 
-https://youtu.be/3wf-Y2KLSe4
-
-Note: if this URL still points to the older concept-only upload, replace it with the regenerated working demo video before final judging.
+https://youtu.be/if6iNBls7CM
 
 ## Presentation Deck
 

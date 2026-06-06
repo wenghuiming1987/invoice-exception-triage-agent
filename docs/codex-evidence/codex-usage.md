@@ -114,16 +114,16 @@ Evidence links and placeholders:
 - Screenshot: generated audit report: `submission/screenshots/04-audit-report.png`
 - Screenshot: UiPath Studio Web API Workflow debug success: `submission/screenshots/07-uipath-debug-success.png`
 - Demo video generated from Codex-prepared narration: `submission/demo/invoice-exception-triage-agent-demo.mp4`
-- Published demo video: https://youtu.be/3wf-Y2KLSe4
+- Published demo video: https://youtu.be/if6iNBls7CM
 - Screenshot: Devpost ready-to-submit page: `submission/screenshots/08-devpost-ready-to-submit.png`
-- Screenshot: YouTube video published/unlisted evidence: `submission/screenshots/09-youtube-video-published.png`
+- Screenshot: original YouTube video published/unlisted evidence: `submission/screenshots/09-youtube-video-published.png`
+- Screenshot: updated YouTube demo showing live terminal/API run: `submission/screenshots/11-youtube-video-updated.png`
 - Screenshot: Devpost submitted project page: `submission/screenshots/10-devpost-submitted.png`
 - Devpost project: https://devpost.com/software/invoice-exception-triage-agent
 
 Placeholder for additional evidence if requested by the judges:
 
-- Screenshot: official-template deck attached on Devpost: `TODO`
-- Screenshot: updated YouTube demo showing live terminal/API run: `TODO`
+- Screenshot: official-template deck attached on Devpost: `submission/deck/contact-sheet.png`
 - Session export link or transcript: `TODO`
 
 ## Boundary

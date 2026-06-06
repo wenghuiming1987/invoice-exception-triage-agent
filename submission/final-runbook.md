@@ -24,9 +24,9 @@ Expected:
 - [x] Regenerated video shows functioning terminal/API/UiPath evidence after organizer feedback.
 - [x] Narration source saved: `submission/demo/demo-narration.json`
 - [x] YouTube upload metadata prepared: `submission/demo/youtube-upload-metadata.md`
-- [x] Previously uploaded to YouTube as unlisted: https://youtu.be/3wf-Y2KLSe4
-- [ ] Confirm the published YouTube link has been replaced with the regenerated working demo video if a new upload is required.
-- [ ] Confirm the updated video link is saved on Devpost after any new upload.
+- [x] Regenerated demo uploaded to YouTube as unlisted: https://youtu.be/if6iNBls7CM
+- [x] Confirm the published YouTube link has been replaced with the regenerated working demo video.
+- [x] Confirm the updated video link is saved on Devpost.
 
 ## GitHub
 
@@ -56,7 +56,7 @@ Expected:
 - [x] Paste project story based on `submission/devpost-project-copy.md`.
 - [x] Add public GitHub repository.
 - [x] Add published demo video link.
-- [ ] Re-check published demo video link after regenerated video upload.
+- [x] Re-check published demo video link after regenerated video upload.
 - [x] Add screenshots.
 - [x] Add presentation deck link.
 - [x] Re-check deck link after pushing official-template deck replacement.

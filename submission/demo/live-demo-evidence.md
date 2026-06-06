@@ -4,6 +4,10 @@ Final local video:
 
 - `submission/demo/invoice-exception-triage-agent-demo.mp4`
 
+Published video:
+
+- https://youtu.be/if6iNBls7CM
+
 Duration:
 
 - Approximately 2 minutes 6 seconds.
@@ -29,7 +33,7 @@ Video preview contact sheet:
 
 - `submission/demo/video-check/contact-sheet.jpg`
 
-Required external update:
+External update:
 
-- If the previous YouTube upload used an older concept-only video, upload this regenerated video and update the Devpost video URL.
-
+- Regenerated video uploaded to YouTube.
+- Devpost public page verified to embed `https://www.youtube.com/embed/if6iNBls7CM`.

@@ -18,7 +18,7 @@ Remediation status:
 - [x] Template-compliant deck replaced at `submission/deck/invoice-exception-triage-agent.pptx`.
 - [x] Local demo video regenerated to show functioning terminal/API/UiPath evidence.
 - [x] Devpost deck link path verified after pushing the template-compliant deck to GitHub.
-- [ ] Devpost YouTube link verified after uploading the regenerated working demo video if a new video URL is published.
+- [x] Devpost YouTube link verified after uploading the regenerated working demo video.
 
 ## Required Submission Assets
 
@@ -31,9 +31,9 @@ Remediation status:
 - [x] Setup instructions included in `README.md`.
 - [x] Demo script kept under 5 minutes and focused on live project behavior: `docs/demo-script.md`.
 - [x] Demo video recorded and kept under 5 minutes: `submission/demo/invoice-exception-triage-agent-demo.mp4`.
-- [x] Demo video uploaded to YouTube as unlisted and linked from Devpost: https://youtu.be/3wf-Y2KLSe4
+- [x] Demo video uploaded to YouTube as unlisted and linked from Devpost: https://youtu.be/if6iNBls7CM
 - [x] Local demo video confirmed to show live terminal/API/UI evidence after organizer feedback.
-- [ ] Published YouTube link confirmed to use the regenerated working demo video.
+- [x] Published YouTube link confirmed to use the regenerated working demo video.
 - [x] Presentation deck prepared or attached if required by the submission phase.
 - [x] Presentation deck link prepared: https://github.com/wenghuiming1987/invoice-exception-triage-agent/blob/main/submission/deck/invoice-exception-triage-agent.pptx
 - [x] Presentation deck confirmed to follow the official UiPath AgentHack template after replacement.
@@ -93,7 +93,7 @@ Remediation status:
 | --- | --- |
 | Working solution, not a concept | CLI, Python package, tests, sample outputs. |
 | Public repository readiness | README, license, setup, docs, tests. |
-| Demo video under 5 minutes | `docs/demo-script.md`, `submission/demo/invoice-exception-triage-agent-demo.mp4`, and https://youtu.be/3wf-Y2KLSe4. |
+| Demo video under 5 minutes | `docs/demo-script.md`, `submission/demo/invoice-exception-triage-agent-demo.mp4`, and https://youtu.be/if6iNBls7CM. |
 | Enterprise workflow complexity | Invoice exception triage with AP review and human escalation. |
 | UiPath platform usage | API Workflow, Maestro BPMN, Action Center, Automation Cloud governance docs. |
 | Human-in-the-loop | `ESCALATE_TO_HUMAN` branch and Action Center task notes. |

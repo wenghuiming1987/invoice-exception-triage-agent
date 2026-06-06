@@ -4,6 +4,10 @@ Local video file:
 
 `submission/demo/invoice-exception-triage-agent-demo.mp4`
 
+Published URL:
+
+https://youtu.be/if6iNBls7CM
+
 Current local video duration:
 
 About 2 minutes 6 seconds.

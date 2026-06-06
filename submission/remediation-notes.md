@@ -47,7 +47,7 @@ Notes:
 
 ### Demo Video
 
-Status: local video regenerated; external YouTube link must be checked after any new upload.
+Status: completed.
 
 Changes:
 
@@ -62,13 +62,15 @@ Changes:
   - Codex evidence.
 - Regenerated `submission/demo/invoice-exception-triage-agent-demo.mp4` to show terminal/API/UiPath evidence.
 - Added `submission/demo/live-demo-evidence.md`.
+- Uploaded regenerated video to YouTube: `https://youtu.be/if6iNBls7CM`.
+- Updated and verified the Devpost public page iframe uses `https://www.youtube.com/embed/if6iNBls7CM`.
 
 ## External Submission Items To Verify
 
 - Devpost repository link: `https://github.com/wenghuiming1987/invoice-exception-triage-agent`
 - Devpost project page: `https://devpost.com/software/invoice-exception-triage-agent`
 - Deck link points to the GitHub path for `submission/deck/invoice-exception-triage-agent.pptx`; that path has been pushed with the official-template deck.
-- YouTube link should point to a video that shows the project working, not only a concept walkthrough.
+- YouTube link points to the regenerated working demo: `https://youtu.be/if6iNBls7CM`.
 
 ## Verification Commands
 

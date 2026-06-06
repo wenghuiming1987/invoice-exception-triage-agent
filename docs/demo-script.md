@@ -4,7 +4,7 @@ Target length: 4 minutes 15 seconds. Keep the final YouTube video under 5 minute
 
 Local demo video asset: `submission/demo/invoice-exception-triage-agent-demo.mp4`.
 
-Published demo video: https://youtu.be/3wf-Y2KLSe4
+Published demo video: https://youtu.be/if6iNBls7CM
 
 ## Recording Standard
 

@@ -358,13 +358,11 @@ Start -> Receive invoice -> Call triage API -> Decision gateway
 
 Prepared local demo video: `submission/demo/invoice-exception-triage-agent-demo.mp4` (under 5 minutes).
 
-Published demo video: https://youtu.be/3wf-Y2KLSe4
+Published demo video: https://youtu.be/if6iNBls7CM
 
 Submitted Devpost project: https://devpost.com/software/invoice-exception-triage-agent
 
 Official-template presentation deck: `submission/deck/invoice-exception-triage-agent.pptx`.
-
-If the published YouTube link still points to an older concept-only upload, upload the regenerated local video and update Devpost before final judging.
 
 The video should show the project working, not only describe the idea. The recommended live demo path:
 
