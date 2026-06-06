@@ -12,9 +12,9 @@ Current local video duration:
 
 About 2 minutes 6 seconds.
 
-Recommended visibility:
+Required visibility:
 
-`Unlisted`
+`Public`
 
 ## Title
 

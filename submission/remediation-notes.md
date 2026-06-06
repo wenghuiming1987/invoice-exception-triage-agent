@@ -62,7 +62,7 @@ Changes:
   - Codex evidence.
 - Regenerated `submission/demo/invoice-exception-triage-agent-demo.mp4` to show terminal/API/UiPath evidence.
 - Added `submission/demo/live-demo-evidence.md`.
-- Uploaded regenerated video to YouTube: `https://youtu.be/if6iNBls7CM`.
+- Uploaded regenerated video to YouTube and set it to public: `https://youtu.be/if6iNBls7CM`.
 - Updated and verified the Devpost public page iframe uses `https://www.youtube.com/embed/if6iNBls7CM`.
 
 ## External Submission Items To Verify

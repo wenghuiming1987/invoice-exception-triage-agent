@@ -8,6 +8,10 @@ Published video:
 
 - https://youtu.be/if6iNBls7CM
 
+Visibility:
+
+- Public
+
 Duration:
 
 - Approximately 2 minutes 6 seconds.

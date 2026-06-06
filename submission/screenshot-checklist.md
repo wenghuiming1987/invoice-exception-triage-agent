@@ -13,6 +13,7 @@ Save final screenshots under `submission/screenshots/`.
 - [x] `08-devpost-ready-to-submit.png`: Devpost final submit page before user confirmation.
 - [x] `09-youtube-video-published.png`: YouTube unlisted demo video published evidence for the previous upload.
 - [x] `11-youtube-video-updated.png`: updated YouTube screenshot showing the regenerated working demo video after upload.
+- [x] `12-youtube-video-public.png`: updated YouTube screenshot showing the regenerated demo video set to public.
 - [x] `10-devpost-submitted.png`: Devpost public project page after successful submission.
 - [ ] `06-uipath-api-workflow.png`: Studio Web API Workflow configuration.
 - [ ] `07-uipath-maestro-branching.png`: Maestro BPMN decision gateway or flow view.

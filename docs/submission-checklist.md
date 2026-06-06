@@ -31,7 +31,7 @@ Remediation status:
 - [x] Setup instructions included in `README.md`.
 - [x] Demo script kept under 5 minutes and focused on live project behavior: `docs/demo-script.md`.
 - [x] Demo video recorded and kept under 5 minutes: `submission/demo/invoice-exception-triage-agent-demo.mp4`.
-- [x] Demo video uploaded to YouTube as unlisted and linked from Devpost: https://youtu.be/if6iNBls7CM
+- [x] Demo video uploaded to YouTube as public and linked from Devpost: https://youtu.be/if6iNBls7CM
 - [x] Local demo video confirmed to show live terminal/API/UI evidence after organizer feedback.
 - [x] Published YouTube link confirmed to use the regenerated working demo video.
 - [x] Presentation deck prepared or attached if required by the submission phase.

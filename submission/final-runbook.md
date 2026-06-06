@@ -24,7 +24,7 @@ Expected:
 - [x] Regenerated video shows functioning terminal/API/UiPath evidence after organizer feedback.
 - [x] Narration source saved: `submission/demo/demo-narration.json`
 - [x] YouTube upload metadata prepared: `submission/demo/youtube-upload-metadata.md`
-- [x] Regenerated demo uploaded to YouTube as unlisted: https://youtu.be/if6iNBls7CM
+- [x] Regenerated demo uploaded to YouTube and set to public: https://youtu.be/if6iNBls7CM
 - [x] Confirm the published YouTube link has been replaced with the regenerated working demo video.
 - [x] Confirm the updated video link is saved on Devpost.
 

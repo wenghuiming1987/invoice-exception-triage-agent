@@ -118,6 +118,7 @@ Evidence links and placeholders:
 - Screenshot: Devpost ready-to-submit page: `submission/screenshots/08-devpost-ready-to-submit.png`
 - Screenshot: original YouTube video published/unlisted evidence: `submission/screenshots/09-youtube-video-published.png`
 - Screenshot: updated YouTube demo showing live terminal/API run: `submission/screenshots/11-youtube-video-updated.png`
+- Screenshot: updated YouTube demo visibility set to public: `submission/screenshots/12-youtube-video-public.png`
 - Screenshot: Devpost submitted project page: `submission/screenshots/10-devpost-submitted.png`
 - Devpost project: https://devpost.com/software/invoice-exception-triage-agent
 
