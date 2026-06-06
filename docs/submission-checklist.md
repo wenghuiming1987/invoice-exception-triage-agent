@@ -17,7 +17,7 @@ Remediation status:
 - [x] Official template downloaded for deck rebuild: `submission/template-review/uipath-agenthack-template.pptx`.
 - [x] Template-compliant deck replaced at `submission/deck/invoice-exception-triage-agent.pptx`.
 - [x] Local demo video regenerated to show functioning terminal/API/UiPath evidence.
-- [ ] Devpost deck link verified after pushing the template-compliant deck.
+- [x] Devpost deck link path verified after pushing the template-compliant deck to GitHub.
 - [ ] Devpost YouTube link verified after uploading the regenerated working demo video if a new video URL is published.
 
 ## Required Submission Assets

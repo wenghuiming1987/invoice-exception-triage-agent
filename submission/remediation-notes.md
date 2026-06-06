@@ -67,7 +67,7 @@ Changes:
 
 - Devpost repository link: `https://github.com/wenghuiming1987/invoice-exception-triage-agent`
 - Devpost project page: `https://devpost.com/software/invoice-exception-triage-agent`
-- Deck link should point to the GitHub path for `submission/deck/invoice-exception-triage-agent.pptx`.
+- Deck link points to the GitHub path for `submission/deck/invoice-exception-triage-agent.pptx`; that path has been pushed with the official-template deck.
 - YouTube link should point to a video that shows the project working, not only a concept walkthrough.
 
 ## Verification Commands

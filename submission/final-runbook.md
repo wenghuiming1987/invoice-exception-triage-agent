@@ -59,7 +59,7 @@ Expected:
 - [ ] Re-check published demo video link after regenerated video upload.
 - [x] Add screenshots.
 - [x] Add presentation deck link.
-- [ ] Re-check deck link after pushing official-template deck replacement.
+- [x] Re-check deck link after pushing official-template deck replacement.
 - [x] Add Codex evidence note in project story.
 - [x] Fill additional info and reach final submit page.
 - [x] Final review with user.
