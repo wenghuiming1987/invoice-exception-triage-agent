@@ -6,7 +6,7 @@ OpenAI Codex was used as the coding agent for this UiPath AgentHack prototype.
 
 - Coding agent: OpenAI Codex
 - Usage type: repository scaffolding, Python implementation, test creation, API contract drafting, UiPath integration documentation, demo-readiness hardening
-- Integration date: 2026-05-30
+- Integration dates: 2026-05-30 initial build; 2026-06-07 submission hardening after organizer feedback
 
 ## Files Codex Helped Create Or Harden
 
@@ -47,6 +47,14 @@ Contracts and documentation:
 - `uipath/studio-web-setup.md`
 - `uipath/maestro-bpmn-notes.md`
 
+Submission materials:
+
+- `submission/deck/invoice-exception-triage-agent.pptx`
+- `submission/deck/presentation-outline.md`
+- `submission/demo/youtube-upload-metadata.md`
+- `submission/demo/demo-narration.json`
+- `submission/remediation-notes.md`
+
 ## How Codex Contributed
 
 Codex helped:
@@ -60,7 +68,8 @@ Codex helped:
 - write an OpenAPI contract matching the implemented endpoint;
 - document how UiPath API Workflow and Maestro BPMN can call and route the coded agent;
 - configure and debug a real UiPath Studio Web API Workflow against a temporary HTTPS endpoint;
-- harden the README and demo script for judge review.
+- harden the README and demo script for judge review;
+- respond to organizer feedback by making setup instructions more explicit, aligning the deck to the official template, and documenting that the demo video must show the working project.
 
 ## Meaningful Integration Into The Working Project
 
@@ -73,6 +82,8 @@ The Codex-generated output is not a separate note or mockup. It is integrated in
 - The OpenAPI contract documents the same request and response fields returned by `triage_invoice`.
 - The UiPath docs explain how the response fields drive Maestro branching and Action Center approval.
 - The Studio Web debug evidence shows the UiPath API Workflow calling the coded agent and receiving `ESCALATE_TO_HUMAN`.
+- The submission deck follows the UiPath AgentHack template structure and summarizes the same working repository evidence.
+- The demo script uses real CLI/API/UiPath evidence rather than a concept-only walkthrough.
 
 ## Verification Evidence
 
@@ -97,7 +108,7 @@ python -m invoice_agent --invoice data/sample_invoices/multiple_high_risk_flags_
 
 ## Screenshot / Session Export Evidence
 
-Final evidence links:
+Evidence links and placeholders:
 
 - Screenshot: terminal output with `python -m pytest`: `submission/screenshots/01-tests-passing.png`
 - Screenshot: generated audit report: `submission/screenshots/04-audit-report.png`
@@ -108,7 +119,12 @@ Final evidence links:
 - Screenshot: YouTube video published/unlisted evidence: `submission/screenshots/09-youtube-video-published.png`
 - Screenshot: Devpost submitted project page: `submission/screenshots/10-devpost-submitted.png`
 - Devpost project: https://devpost.com/software/invoice-exception-triage-agent
-- Session export link or transcript: not exported in this repository.
+
+Placeholder for additional evidence if requested by the judges:
+
+- Screenshot: official-template deck attached on Devpost: `TODO`
+- Screenshot: updated YouTube demo showing live terminal/API run: `TODO`
+- Session export link or transcript: `TODO`
 
 ## Boundary
 

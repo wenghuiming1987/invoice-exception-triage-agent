@@ -11,11 +11,15 @@ The repository is runnable locally. It includes source code, tests, sample invoi
 
 ## 3-Minute Judge Path
 
+Use this path after cloning the repository and opening a terminal in the project root.
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -e ".[dev]"
+python -m pip install --upgrade pip
+python -m pip install -e ".[api,dev]"
 python -m pytest
+mkdir -p reports
 python -m invoice_agent --invoice data/sample_invoices/clean_invoice.json --output reports/clean_invoice_audit.json
 python -m invoice_agent --invoice data/sample_invoices/multiple_high_risk_flags_invoice.json --output reports/risky_invoice_audit.json
 ```
@@ -25,6 +29,159 @@ Expected outcomes:
 - clean invoice: `LOW` risk, `AUTO_APPROVE`;
 - risky invoice: `HIGH` risk, `ESCALATE_TO_HUMAN`;
 - audit reports written under `reports/`.
+
+## Detailed Judge Setup Instructions
+
+These steps are written for a judge or reviewer who wants to reproduce the working prototype from a clean checkout.
+
+### 1. Prerequisites
+
+Install or confirm:
+
+- Python 3.11 or newer;
+- Git;
+- a terminal on macOS, Linux, or Windows WSL;
+- optional: UiPath Automation Cloud / Studio Web access if you want to reproduce the low-code orchestration call;
+- optional: an HTTPS tunnel or hosted API endpoint if UiPath Automation Cloud must call the local API.
+
+Check Python:
+
+```bash
+python3 --version
+```
+
+### 2. Clone Or Open The Repository
+
+```bash
+git clone https://github.com/wenghuiming1987/invoice-exception-triage-agent.git
+cd invoice-exception-triage-agent
+```
+
+If you are reviewing a downloaded zip, open a terminal in the extracted `invoice-exception-triage-agent` folder.
+
+### 3. Create The Python Environment
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+```
+
+On Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+```
+
+### 4. Install The Prototype
+
+Install the package, test tools, and optional FastAPI server dependencies:
+
+```bash
+python -m pip install -e ".[api,dev]"
+```
+
+If you only want the CLI and tests, `python -m pip install -e ".[dev]"` is enough.
+
+### 5. Verify The Build
+
+```bash
+python -m pytest
+```
+
+Expected result:
+
+```text
+35 passed
+```
+
+### 6. Run The CLI Demo
+
+Generate an auto-approved clean invoice audit report:
+
+```bash
+mkdir -p reports
+python -m invoice_agent \
+  --invoice data/sample_invoices/clean_invoice.json \
+  --output reports/clean_invoice_audit.json
+```
+
+Expected key fields:
+
+```json
+{
+  "risk_level": "LOW",
+  "decision": "AUTO_APPROVE"
+}
+```
+
+Generate a high-risk human escalation audit report:
+
+```bash
+python -m invoice_agent \
+  --invoice data/sample_invoices/multiple_high_risk_flags_invoice.json \
+  --output reports/risky_invoice_audit.json
+```
+
+Expected key fields:
+
+```json
+{
+  "risk_level": "HIGH",
+  "decision": "ESCALATE_TO_HUMAN"
+}
+```
+
+Generate reproducible audit reports for every sample invoice:
+
+```bash
+mkdir -p reports
+for file in data/sample_invoices/*.json; do
+  name="$(basename "$file" .json)"
+  python -m invoice_agent --invoice "$file" --output "reports/${name}_audit.json"
+done
+```
+
+### 7. Run The Local API
+
+Start the FastAPI wrapper:
+
+```bash
+uvicorn invoice_agent.api:app --host 127.0.0.1 --port 8000
+```
+
+In a second terminal with the same virtual environment active:
+
+```bash
+curl -s http://127.0.0.1:8000/health
+curl -s http://127.0.0.1:8000/triage/invoice \
+  -H "Content-Type: application/json" \
+  -d @data/sample_invoices/amount_exceeds_po_invoice.json
+```
+
+The endpoint contract is documented in `openapi/invoice-triage-api.yaml` and `uipath/api-workflow-contract.md`.
+
+### 8. Reproduce The UiPath Call
+
+1. Start the local API or deploy it to an approved HTTPS host.
+2. If running locally, expose `127.0.0.1:8000` through an approved HTTPS tunnel so UiPath Automation Cloud can reach it.
+3. In UiPath Studio Web, create an API Workflow named `Invoice Triage API`.
+4. Add an input argument named `invoicePayload`.
+5. Add an HTTP Request step:
+   - Method: `POST`
+   - URL: `https://<your-host>/triage/invoice`
+   - Headers: `Content-Type: application/json`, `Accept: application/json`
+   - Body: `JSON.stringify(invoicePayload)`
+6. Parse the JSON response into `triageResponse`.
+7. In Maestro, branch on `triageResponse.decision`:
+   - `AUTO_APPROVE`: continue ERP posting or payment scheduling.
+   - `REVIEW_REQUIRED`: route to AP analyst review.
+   - `ESCALATE_TO_HUMAN`: create an Action Center approval task and hold posting.
+8. Route HTTP failures, malformed payloads, or timeouts to a technical exception lane. Do not auto-approve when the API call fails.
+
+Full UiPath setup notes are in `uipath/studio-web-setup.md`, `uipath/maestro-bpmn-notes.md`, and `uipath/api-workflow-contract.md`.
 
 ## Business Problem
 
@@ -111,36 +268,6 @@ Expected audit outputs are stored in `data/expected_outputs/` and are covered by
 ├── tests/
 └── uipath/
 ```
-
-## Setup
-
-Use Python 3.11 or newer.
-
-1. Create a virtual environment:
-
-```bash
-python3 -m venv .venv
-```
-
-2. Activate it:
-
-```bash
-source .venv/bin/activate
-```
-
-3. Install the project with test dependencies:
-
-```bash
-python -m pip install -e ".[dev]"
-```
-
-4. Optional: install API server dependencies:
-
-```bash
-python -m pip install -e ".[api,dev]"
-```
-
-If your environment already maps `python` to Python 3.11+, `python -m venv .venv` also works.
 
 ## Run Tests
 
@@ -229,20 +356,25 @@ Start -> Receive invoice -> Call triage API -> Decision gateway
 
 ## Demo Video Path
 
-Prepared local video: `submission/demo/invoice-exception-triage-agent-demo.mp4` (about 2 minutes 17 seconds).
+Prepared local demo video: `submission/demo/invoice-exception-triage-agent-demo.mp4` (under 5 minutes).
 
 Published demo video: https://youtu.be/3wf-Y2KLSe4
 
 Submitted Devpost project: https://devpost.com/software/invoice-exception-triage-agent
 
-The fastest live demo:
+Official-template presentation deck: `submission/deck/invoice-exception-triage-agent.pptx`.
+
+If the published YouTube link still points to an older concept-only upload, upload the regenerated local video and update Devpost before final judging.
+
+The video should show the project working, not only describe the idea. The recommended live demo path:
 
 1. Run tests.
 2. Run the clean invoice CLI command and show `AUTO_APPROVE`.
 3. Run the risky invoice CLI command and show `ESCALATE_TO_HUMAN`.
 4. Open the generated audit report.
-5. Show the UiPath BPMN notes and API contract.
-6. Show Codex evidence.
+5. Show the local API response or UiPath Studio Web debug response.
+6. Show the UiPath BPMN notes and Action Center branch.
+7. Show Codex evidence and the official template deck.
 
 Detailed script: `docs/demo-script.md`.
 

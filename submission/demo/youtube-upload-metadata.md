@@ -4,6 +4,10 @@ Local video file:
 
 `submission/demo/invoice-exception-triage-agent-demo.mp4`
 
+Current local video duration:
+
+About 2 minutes 6 seconds.
+
 Recommended visibility:
 
 `Unlisted`
@@ -16,14 +20,17 @@ Invoice Exception Triage Agent - UiPath AgentHack 2026 Demo
 
 Invoice Exception Triage Agent is a UiPath AgentHack 2026 prototype for accounts-payable invoice exception triage.
 
-The demo shows:
+The demo shows the project functioning in the local device/environment:
 
-- deterministic invoice risk scoring;
-- clean invoice auto-approval;
-- high-risk invoice human escalation;
-- reproducible audit reports;
+- local repository and Python environment;
+- tests passing with `python -m pytest`;
+- CLI processing a clean invoice and returning `LOW / AUTO_APPROVE`;
+- local API processing a medium-risk invoice and returning `MEDIUM / REVIEW_REQUIRED`;
+- CLI processing a high-risk invoice and returning `HIGH / ESCALATE_TO_HUMAN`;
+- generated audit report evidence;
 - UiPath Studio Web API Workflow debug evidence;
 - UiPath Maestro BPMN and Action Center integration design;
+- official-template presentation deck;
 - OpenAI Codex usage evidence integrated into a working repository.
 
 GitHub repository:

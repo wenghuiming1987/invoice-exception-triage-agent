@@ -20,11 +20,13 @@ Expected:
 ## Demo Video
 
 - [x] Local demo video generated: `submission/demo/invoice-exception-triage-agent-demo.mp4`
-- [x] Duration verified under 5 minutes: about 2 minutes 17 seconds.
+- [x] Duration verified under 5 minutes: about 2 minutes 6 seconds.
+- [x] Regenerated video shows functioning terminal/API/UiPath evidence after organizer feedback.
 - [x] Narration source saved: `submission/demo/demo-narration.json`
 - [x] YouTube upload metadata prepared: `submission/demo/youtube-upload-metadata.md`
-- [x] Uploaded to YouTube as unlisted: https://youtu.be/3wf-Y2KLSe4
-- [x] Added video link to Devpost draft.
+- [x] Previously uploaded to YouTube as unlisted: https://youtu.be/3wf-Y2KLSe4
+- [ ] Confirm the published YouTube link has been replaced with the regenerated working demo video if a new upload is required.
+- [ ] Confirm the updated video link is saved on Devpost after any new upload.
 
 ## GitHub
 
@@ -54,8 +56,10 @@ Expected:
 - [x] Paste project story based on `submission/devpost-project-copy.md`.
 - [x] Add public GitHub repository.
 - [x] Add published demo video link.
+- [ ] Re-check published demo video link after regenerated video upload.
 - [x] Add screenshots.
 - [x] Add presentation deck link.
+- [ ] Re-check deck link after pushing official-template deck replacement.
 - [x] Add Codex evidence note in project story.
 - [x] Fill additional info and reach final submit page.
 - [x] Final review with user.

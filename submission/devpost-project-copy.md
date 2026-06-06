@@ -69,9 +69,10 @@ The prototype reduces AP queue noise by letting clean invoices move forward auto
 1. Run tests.
 2. Process a clean invoice and show `AUTO_APPROVE`.
 3. Process a high-risk invoice and show `ESCALATE_TO_HUMAN`.
-4. Open generated audit report.
-5. Show API contract and UiPath BPMN branch design.
-6. Show Codex evidence.
+4. Call the local API and show `REVIEW_REQUIRED` for a medium-risk invoice.
+5. Open generated audit report.
+6. Show UiPath Studio Web debug evidence and BPMN branch design.
+7. Show Codex evidence and the official-template deck.
 
 ## Built With
 
@@ -121,11 +122,13 @@ Local source file:
 
 `submission/demo/invoice-exception-triage-agent-demo.mp4`
 
-Duration: about 2 minutes 17 seconds.
+Duration: about 2 minutes 6 seconds.
 
 Devpost-required published video URL:
 
 https://youtu.be/3wf-Y2KLSe4
+
+Note: if this URL still points to the older concept-only upload, replace it with the regenerated working demo video before final judging.
 
 ## Presentation Deck
 
